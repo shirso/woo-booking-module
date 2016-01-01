@@ -1,0 +1,11 @@
+.wbm-hidden,.show_if_wbm_panel{display:none !important;}
+li.wbm_attribute_options a:before{content: "\e00e" !important;}
+.wbm_attribute_terms{width:100%;}
+.wbm_text{width: auto !important;}
+.wbm_form-field{margin-bottom: 15px;}
+.wbm-left{margin-left: 20px;}
+.wbmflbtn{display: inline-block;}
+.wbmnm{font-weight: 700;font-weight: 700; margin: 10px 0; display: block;}
+.wbm-dvdr{width: 100%;  border-top: 1px solid #ccc; margin:25px 0;}
+.wbmasd{ border: 1px solid #ccc; background: #E1E1E1; padding: 10px;}
+.wbm-opsn{margin-left:90px; overflow:hidden;}
