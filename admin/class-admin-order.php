@@ -6,6 +6,7 @@ if (!class_exists('WBM_Admin_Order')) {
 	        add_action( 'save_post',array(&$this,'wbm_save_order_user'));
 	        add_filter('manage_edit-shop_order_columns', array(&$this,'add_new_shop_order_column'),15);
 	        add_action('manage_shop_order_posts_custom_column', array(&$this,'manage_shop_order_column'), 10, 2);
+	        add_filter('woocommerce_admin_order_actions',array(&$this,'wbm_manage_buttons'),99,2);
         }
 		public function add_order_meta_box(){
 			add_meta_box(
@@ -60,7 +61,7 @@ if (!class_exists('WBM_Admin_Order')) {
 		    switch ($column) {
 			    case "wbm_assign_to" :
 				    $wbm_assign_to = get_post_meta( $post->ID, '_wbm_order_user', true );
-				    if ( ! empty( $wbm_assign_to ) ) {
+				    if ( !empty( $wbm_assign_to ) ) {
 					    $user_data = get_user_by( 'id', $wbm_assign_to );
 					    echo $user_data->display_name;
 				    } else {
@@ -69,6 +70,17 @@ if (!class_exists('WBM_Admin_Order')) {
 				    break;
 
 		    }
+	    }
+	    function wbm_manage_buttons($actions,$order){
+		    if(!is_super_admin()){
+			    $wbm_assign_to = get_post_meta( $order->id, '_wbm_order_user', true );
+			    if(empty($wbm_assign_to) || $wbm_assign_to==get_current_user_id()){
+				    return $actions;
+			    }else{
+				    $actions=array();
+			    }
+		    }
+		    return $actions;
 	    }
     }
     new WBM_Admin_Order();
