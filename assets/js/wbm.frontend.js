@@ -104,8 +104,16 @@ jQuery(function($){
       $("#wbm_secondary_list li").removeClass('wbm_hidden');
       hidden_container.find("#wbm_main_attr").find(".wbm_title").val($(this).data('title'));
       hidden_container.find("#wbm_main_attr").find(".wbm_term").val($(this).data('term'));
-      removeFromInactive(1);
-      wbm_tabs.responsiveTabs('activate',currentIndex+1);
+  });
+  $(document).on('click','.wbm_navigate_button_for_first',function(e){
+      e.preventDefault();
+      if(hidden_container.find("#wbm_main_attr").find(".wbm_title").val()!="" || hidden_container.find("#wbm_main_attr").find(".wbm_term").val()!=""){
+           removeFromInactive(1);
+          wbm_tabs.responsiveTabs('activate',currentIndex+1);
+      }else{
+            jAlert(wbm_params.choose_first_option_msg,wbm_params.alert_heading);
+      }
+
   });
  //$(document).on('change','.wbm_date_check',function(){
  //    var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';

@@ -35,7 +35,8 @@ if (!class_exists('WBM_Scripts_Styles')) {
                     'alert_heading'=>'Error',
                     'alert_msg'=>__('Please fill up all fields','wbm'),
                     'confirm_heading'=>__('Confirmation','wbm'),
-                    'confirm_msg'=>__('Are you sure to book?','wbm')
+                    'confirm_msg'=>__('Are you sure to book?','wbm'),
+	                'choose_first_option_msg'=>__('Please choose any option first','wbm')
                 ));
                 wp_enqueue_script('wbm_script_frontend');
             }

@@ -95,7 +95,7 @@ if (!class_exists('WBM_Frontend_Product')) {
                                 <?php }
                             }
                         } ?>
-                        <div class="cntn lftbtn"><a data-type="next" class="wbm_next wbm_navigate_button"
+                        <div class="cntn lftbtn"><a data-type="next" class="wbm_next wbm_navigate_button_for_first"
                                                     href="#"><?= __('Continue', 'wbm') ?></a></div>
                     </div>
                     <?php if (isset($secondary_variations) && !empty($secondary_variations)) {
