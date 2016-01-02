@@ -22,7 +22,7 @@ if( !class_exists('WBM_Admin') ) {
                 $role->add_cap( 'read' );
                 require_once(WBM_PLUGIN_ADMIN_DIR.'/class-admin-attributes.php');
                 require_once(WBM_PLUGIN_ADMIN_DIR . '/class-admin-product.php' );
-
+                require_once(WBM_PLUGIN_ADMIN_DIR . '/class-admin-order.php' );
         }
         public static function admin_scripts(){
             wp_enqueue_media();

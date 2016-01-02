@@ -1,7 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: RSS-Techno
- * Date: 12/31/2015
- * Time: 6:37 PM
- */
+<?php if (!defined('ABSPATH')) exit;
+if (!class_exists('WBM_Admin_Order')) {
+    class WBM_Admin_Order{
+        public function __construct() {
+            add_action( 'add_meta_boxes', array(&$this,'add_order_meta_box'));
+        }
+
+    }
+    new WBM_Admin_Order();
+}
