@@ -4,6 +4,8 @@ if (!class_exists('WBM_Admin_Order')) {
         public function __construct() {
             add_action( 'add_meta_boxes', array(&$this,'add_order_meta_box'));
 	        add_action( 'save_post',array(&$this,'wbm_save_order_user'));
+	        add_filter('manage_edit-shop_order_columns', array(&$this,'add_new_shop_order_column'),15);
+	        add_action('manage_shop_order_posts_custom_column', array(&$this,'manage_shop_order_column'), 10, 2);
         }
 		public function add_order_meta_box(){
 			add_meta_box(
@@ -47,6 +49,25 @@ if (!class_exists('WBM_Admin_Order')) {
 			    update_post_meta($post_id,"_wbm_order_user",absint($_POST["wbm_order_user"]));
 		    }else{
 			    delete_post_meta($post_id,"_wbm_order_user");
+		    }
+	    }
+	    function add_new_shop_order_column($columns){
+		    $columns["wbm_assign_to"]=__('Assign To','wbm');
+		    return $columns;
+	    }
+	    function manage_shop_order_column($column){
+		    global $post, $woocommerce, $the_order;
+		    switch ($column) {
+			    case "wbm_assign_to" :
+				    $wbm_assign_to = get_post_meta( $post->ID, '_wbm_order_user', true );
+				    if ( ! empty( $wbm_assign_to ) ) {
+					    $user_data = get_user_by( 'id', $wbm_assign_to );
+					    echo $user_data->display_name;
+				    } else {
+					    echo '---';
+					}
+				    break;
+
 		    }
 	    }
     }
