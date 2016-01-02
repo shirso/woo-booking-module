@@ -51,7 +51,9 @@ if (!class_exists('WBM_Product_Cart')) {
                         }
                     }
                 }
+	            $other_data[] = array('name' =>$mainAttr, 'display' => $html, 'value' => '','hidden'=>false);
             }
+	        return $other_data;
         }
         public function order_item_meta($item_id, $cart_item){
             if(isset($cart_item['wbm_product_cart']) && isset($cart_item['wbm_product_price']) && isset($cart_item['wbm_product_attributes'])){
