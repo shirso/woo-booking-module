@@ -12,6 +12,7 @@ if (!class_exists('WBM_Frontend_Ajax')) {
             $termId=intval($_POST['termId']);
             $allOptions_select_needed=get_post_meta($productId,'_wbm_select_needed_'.$taxonomy.'_'.$termId,true);
             $thumbnail=get_option('_wbm_variation_attr_'.$termId);
+            $tooltip = get_option('_wbm_variation_tooltip_' .$termId);
             $termDetails=get_term($termId,$taxonomy);
             $attr_price=get_post_meta($productId,'_wbm_main_attribute_'.$termDetails->taxonomy.'_'.$termDetails->term_id,true);
             $allOptions_date_needed=get_post_meta($productId,'_wbm_date_needed_'.$taxonomy.'_'.$termId,true);
@@ -25,7 +26,12 @@ if (!class_exists('WBM_Frontend_Ajax')) {
                     <img src="<?=$thumbnail?>" class="img-responsive">
                 <?php }?>
                 <div class="mlftx"> <h2><?=$termDetails->name?></h2>
-                <p><?=$termDetails->description?></p>
+                <p><?=$termDetails->description?>
+                    <?php if(!empty($tooltip)){?>
+                        <a href="#" class="toltp">(?) <span><?=esc_html($tooltip)?></span></a>
+                    <?php }?>
+                </p>
+
                 </div>
             </div>
             <div class="wbm_accordion" id="wbm_accordion_<?=$taxonomy?>_<?=$termId?>">

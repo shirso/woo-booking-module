@@ -81,7 +81,9 @@ if (!class_exists('WBM_Frontend_Product')) {
                                     <div class="col-sm-4 sps wbm_first_step_divs"
                                          data-term="<?= $variation1->term_id ?>" data-title="<?= $variation1->name; ?>"
                                          data-price="">
-                                        <?php $thumbnail = get_option('_wbm_variation_attr_' . $variation1->term_id); ?>
+                                        <?php $thumbnail = get_option('_wbm_variation_attr_' . $variation1->term_id);
+                                        $tooltip = get_option('_wbm_variation_tooltip_' . $variation1->term_id);
+                                        ?>
                                         <?php if (!empty($thumbnail)) ?>
                                         <img src="<?= $thumbnail ?>" class="img-responsive"/>
 
@@ -89,7 +91,9 @@ if (!class_exists('WBM_Frontend_Product')) {
 
                                         <p>
                                             <?= $variation1->description ?>
-                                            <a href="#" class="toltp">(?)</a>
+                                            <?php if(!empty($tooltip)){?>
+                                            <a href="#" class="toltp">(?) <span><?=esc_html($tooltip)?></span></a>
+                                        <?php }?>
                                         </p>
                                     </div>
                                 <?php }
