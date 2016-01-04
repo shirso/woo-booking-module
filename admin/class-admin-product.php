@@ -15,7 +15,7 @@ if (!class_exists('WBM_Admin_Product')) {
         }
         public static function wbm_product_meta()
         {
-            oocommerce_wp_textarea_input(
+            woocommerce_wp_textarea_input(
                 array('id' => '_wbm_details_link',
                     'label' => __('Details Page Link', 'wbm'),
                     'placeholder' => '',
