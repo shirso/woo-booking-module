@@ -36,6 +36,7 @@ if (!class_exists('WBM_Admin_Attributes')) {
             <div class="form-field">
                 <label for="hd_wbm_attribute_tooltip"><?= __('Tooltip', 'wbm') ?></label>
                 <textarea id="hd_wbm_attribute_tooltip" name="hd_wbm_attribute_tooltip" cols="40" rows="5"></textarea>
+                <p class="description"><?=esc_html__('To insert link in tooltip, use this format <a href="http://www.google.com/">Google</a>','wbm')?></p>
             </div>
         <?php }
         public function add_image_uploader_to_edit_form($term)
@@ -70,6 +71,7 @@ if (!class_exists('WBM_Admin_Attributes')) {
                 <th><?= __('Tooltip', 'wbm') ?></th>
                 <td>
                     <textarea id="hd_wbm_attribute_tooltip" name="hd_wbm_attribute_tooltip" class="large-text" cols="50" rows="5"><?= @$tooltip; ?></textarea>
+                    <p class="description"><?=esc_html__('To insert link in tooltip, use this format <a href="http://www.google.com/">Google</a>','wbm')?></p>
                 </td>
             </tr>
         <?php }

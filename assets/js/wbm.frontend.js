@@ -5,7 +5,7 @@ jQuery(function($){
    var currentIndex=0;
    var hidden_container=$("#wbm_hidden_container");
    $('.wbm_switch').lc_switch(wbm_params.yes_string,wbm_params.no_string);
-    $('.toltp').tooltipster();
+    $('.toltp').tooltipster({contentAsHTML: true,interactive: true});
    var inactiveTabs=[];
    var noNeedTabs=[];
    for(var i=1;i<$("#wbm_secondary_list").find("li").length-1;i++){
@@ -253,6 +253,7 @@ var loadHiddenDates=function(resp,taxonomy,termId){
     });
 };
 var makeDatetimePicker=function(resp,taxonomy,termId){
+    $('.toltp').tooltipster();
 $(resp).find(".wbm_datetime_input").each(function(k,v){
     var self=$(this);
     var type=self.data("type");
