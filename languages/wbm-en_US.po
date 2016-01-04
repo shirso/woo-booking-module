@@ -1,0 +1,296 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Booking Module\n"
+"POT-Creation-Date: 2016-01-04 15:12+0530\n"
+"PO-Revision-Date: 2016-01-04 15:16+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/admin_booking_dates.php:12
+msgid "Dates for"
+msgstr "Dates for"
+
+#: admin/admin_booking_dates.php:18
+msgid "Add Date Fields"
+msgstr "Add Date Fields"
+
+#: admin/admin_booking_dates.php:30 admin/admin_booking_options.php:41
+msgid "Display Title"
+msgstr "Display Title"
+
+#: admin/admin_booking_dates.php:33
+msgid "No Date Field"
+msgstr "No Date Field"
+
+#: admin/admin_booking_dates.php:35
+msgid "Add Date Field"
+msgstr "Add Date Field"
+
+#: admin/admin_booking_dates.php:37
+msgid "Remove Date Field"
+msgstr "Remove Date Field"
+
+#: admin/admin_booking_dates.php:45 admin/admin_booking_options.php:72
+msgid "Save All"
+msgstr "Save All"
+
+#: admin/admin_booking_dates.php:58 admin/admin_booking_options.php:83
+msgid "Saving"
+msgstr "Saving"
+
+#: admin/admin_booking_options.php:19
+msgid "Options and Price for"
+msgstr "Options and Price for"
+
+#: admin/admin_booking_options.php:24
+msgid "Price for"
+msgstr "Price for"
+
+#: admin/admin_booking_options.php:29
+msgid "Add Drop-down Options"
+msgstr "Add Drop-down Options"
+
+#: admin/admin_booking_options.php:43 admin/class-admin-attributes.php:98
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: admin/admin_booking_options.php:45 admin/class-admin-attributes.php:34
+#: admin/class-admin-attributes.php:67
+msgid "Upload"
+msgstr "Upload"
+
+#: admin/admin_booking_options.php:47
+msgid "Options"
+msgstr "Options"
+
+#: admin/admin_booking_options.php:50
+msgid "Value"
+msgstr "Value"
+
+#: admin/admin_booking_options.php:52
+msgid "Price"
+msgstr "Price"
+
+#: admin/admin_booking_options.php:56
+msgid "No Option"
+msgstr "No Option"
+
+#: admin/admin_booking_options.php:58
+msgid "Add Option"
+msgstr "Add Option"
+
+#: admin/admin_booking_options.php:59
+msgid "Remove Option"
+msgstr "Remove Option"
+
+#: admin/admin_booking_options.php:64
+msgid "No Drop-down"
+msgstr "No Drop-down"
+
+#: admin/admin_booking_options.php:66
+msgid "Add Drop-down"
+msgstr "Add Drop-down"
+
+#: admin/admin_booking_options.php:67
+msgid "Remove Drop-down"
+msgstr "Remove Drop-down"
+
+#: admin/class-admin-attributes.php:25 admin/class-admin-attributes.php:55
+msgid "Need Image Upload?"
+msgstr "Need Image Upload?"
+
+#: admin/class-admin-attributes.php:27 admin/class-admin-attributes.php:57
+msgid "If this attribute need image, then check it"
+msgstr "If this attribute need image, then check it"
+
+#: admin/class-admin-attributes.php:30 admin/class-admin-attributes.php:63
+msgid "Image"
+msgstr "Image"
+
+#: admin/class-admin-attributes.php:37 admin/class-admin-attributes.php:71
+msgid "Tooltip"
+msgstr "Tooltip"
+
+#: admin/class-admin-attributes.php:39 admin/class-admin-attributes.php:74
+msgid ""
+"To insert link in tooltip, use this format <a href=\"http://www.google.com/"
+"\">Google</a>"
+msgstr ""
+"To insert link in tooltip, use this format <a href=\"http://www.google.com/"
+"\">Google</a>"
+
+#: admin/class-admin-order.php:15
+msgid "Booking Manager"
+msgstr "Booking Manager"
+
+#: admin/class-admin-order.php:27
+msgid "Choose a User"
+msgstr "Choose a User"
+
+#: admin/class-admin-order.php:42
+msgid "Assign Yourself"
+msgstr "Assign Yourself"
+
+#: admin/class-admin-order.php:56
+msgid "Assign To"
+msgstr "Assign To"
+
+#: admin/class-admin-product.php:20
+msgid "Details Page Link"
+msgstr "Details Page Link"
+
+#: admin/class-admin-product.php:22
+msgid "Enter details page link with http://"
+msgstr "Enter details page link with http://"
+
+#: admin/class-admin-product.php:30
+msgid "Enable Booking Module"
+msgstr "Enable Booking Module"
+
+#: admin/class-admin-product.php:31
+msgid "Enable Booking Module for this Product."
+msgstr "Enable Booking Module for this Product."
+
+#: admin/class-admin-product.php:38
+msgid "Booking Module"
+msgstr "Booking Module"
+
+#: admin/class-admin-product.php:67
+msgid "Refresh this tab content"
+msgstr "Refresh this tab content"
+
+#: admin/class-admin-product.php:70
+msgid "Please publish or save as draft before going forward"
+msgstr "Please publish or save as draft before going forward"
+
+#: admin/class-admin-product.php:75
+msgid "Base Attribute"
+msgstr "Base Attribute"
+
+#: admin/class-admin-product.php:77
+msgid "Choose Base Attribute"
+msgstr "Choose Base Attribute"
+
+#: admin/class-admin-product.php:85 admin/class-admin-product.php:96
+msgid "Save"
+msgstr "Save"
+
+#: admin/class-admin-product.php:88
+msgid "Secondary Attribute"
+msgstr "Secondary Attribute"
+
+#: admin/class-admin-product.php:90
+msgid "Choose Secondary Attribute"
+msgstr "Choose Secondary Attribute"
+
+#: admin/class-admin-product.php:105
+msgid "Add / Edit Options"
+msgstr "Add / Edit Options"
+
+#: admin/class-admin-product.php:106
+msgid "Add / Edit Date Fields"
+msgstr "Add / Edit Date Fields"
+
+#: admin/class-admin.php:13
+msgid "Employee/Cleaner"
+msgstr "Employee/Cleaner"
+
+#: admin/class-admin.php:44 admin/class-admin.php:45
+msgid "Booking Options"
+msgstr "Booking Options"
+
+#: admin/class-admin.php:52 admin/class-admin.php:53
+msgid "Booking Dates"
+msgstr "Booking Dates"
+
+#: inc/class-frontend-ajax.php:22 inc/class-scripts-styles.php:35
+msgid "I want this service"
+msgstr "I want this service"
+
+#: inc/class-frontend-ajax.php:43
+msgid "Details"
+msgstr "Details"
+
+#: inc/class-frontend-ajax.php:64
+msgid "Dates"
+msgstr "Dates"
+
+#: inc/class-frontend-ajax.php:74
+msgid "Date"
+msgstr "Date"
+
+#: inc/class-frontend-ajax.php:75
+msgid "Time"
+msgstr "Time"
+
+#: inc/class-frontend-ajax.php:85 inc/class-frontend-product.php:103
+msgid "Continue"
+msgstr "Continue"
+
+#: inc/class-frontend-product.php:43
+msgid "View Details"
+msgstr "View Details"
+
+#: inc/class-frontend-product.php:44 inc/class-frontend-product.php:122
+msgid "Book Now"
+msgstr "Book Now"
+
+#: inc/class-frontend-product.php:61
+msgid "Your Needs"
+msgstr "Your Needs"
+
+#: inc/class-frontend-product.php:73
+msgid "Your Choices"
+msgstr "Your Choices"
+
+#: inc/class-frontend-product.php:76
+msgid "What do you need from us?"
+msgstr "What do you need from us?"
+
+#: inc/class-frontend-product.php:125
+msgid "You haven't finish selection"
+msgstr "You haven't finish selection"
+
+#: inc/class-frontend-product.php:129
+msgid "Total Price"
+msgstr "Total Price"
+
+#: inc/class-scripts-styles.php:32
+msgid "Yes"
+msgstr "Yes"
+
+#: inc/class-scripts-styles.php:33
+msgid "No"
+msgstr "No"
+
+#: inc/class-scripts-styles.php:34
+msgid "I don't want this service"
+msgstr "I don't want this service"
+
+#: inc/class-scripts-styles.php:38
+msgid "Please fill up all fields"
+msgstr "Please fill up all fields"
+
+#: inc/class-scripts-styles.php:39
+msgid "Confirmation"
+msgstr "Confirmation"
+
+#: inc/class-scripts-styles.php:40
+msgid "Are you sure to book?"
+msgstr "Are you sure to book?"
+
+#: inc/class-scripts-styles.php:41
+msgid "Please choose any option first"
+msgstr "Please choose any option first"
