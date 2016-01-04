@@ -99,8 +99,7 @@ if (!class_exists('WBM_Frontend_Product')) {
                                 <?php }
                             }
                         } ?>
-                        <div class="cntn lftbtn"><a data-type="next" class="wbm_next wbm_navigate_button_for_first"
-                                                    href="#"><?= __('Continue', 'wbm') ?></a></div>
+                        <div class="cntn lftbtn"><button data-type="next" class="wbm_next wbm_navigate_button_for_first"><?= __('Continue', 'wbm') ?></button></div>
                     </div>
                     <?php if (isset($secondary_variations) && !empty($secondary_variations)) {
                         foreach ($secondary_variations as $variation) {
@@ -134,6 +133,7 @@ if (!class_exists('WBM_Frontend_Product')) {
             <script type="text/javascript">
                 var productId =<?=$post->ID;?>;
                 var initial_price =<?=$initial_price?>;
+                var wbm_ajax_nonce='<?=wp_create_nonce( "wbm_ajax_nonce" );?>';
             </script>
             <?php
         }

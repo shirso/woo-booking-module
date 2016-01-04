@@ -209,7 +209,8 @@ var loadAttributeTab=function(productId,taxonomy,termId){
          'action':'wbm_load_attribute_tab',
          'productId':productId,
          'taxonomy':taxonomy,
-         'termId':termId
+         'termId':termId,
+         'wbm_whole_check':wbm_ajax_nonce
      };
      $.post(wbm_params.ajaxURL, data, function (resp) {
             $(div).html(resp);

@@ -7,6 +7,7 @@ if (!class_exists('WBM_Frontend_Ajax')) {
             add_action('wp_ajax_nopriv_wbm_load_attribute_tab',array(&$this,'load_attribute_tab'));
         }
         public function load_attribute_tab(){
+            check_ajax_referer( 'wbm_ajax_nonce', 'wbm_whole_check' );
             $productId=intval($_POST['productId']);
             $taxonomy=esc_attr($_POST['taxonomy']);
             $termId=intval($_POST['termId']);
@@ -82,7 +83,7 @@ if (!class_exists('WBM_Frontend_Ajax')) {
             <?php }?>
             </div>
 <!--            <div class="cntn lftbtn"><a class="wbm_previous wbm_navigate_button" data-type="prev" href="#"><< --><?//=__('Previous','wbm')?><!--</a> <a data-type="next" class="wbm_next wbm_navigate_button" href="#">--><?//=__('Next','wbm')?><!-- >></a></div>-->
-            <div class="cntn lftbtn"><a data-type="next" class="wbm_next wbm_navigate_button" href="#"><?=__('Continue','wbm')?></a></div>
+            <div class="cntn lftbtn"><button data-type="next" class="wbm_next wbm_navigate_button"><?=__('Continue','wbm')?></button></div>
            <?php  exit;
         }
 
