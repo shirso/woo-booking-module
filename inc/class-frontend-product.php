@@ -74,6 +74,7 @@ if (!class_exists('WBM_Frontend_Product')) {
                     </ul>
                     <div id="wbm_first_tab">
                         <h3><?= __('What do you need from us?', 'wbm') ?></h3>
+						<div class="clearfix">
                         <?php if (isset($primary_variation) && !empty($primary_variation)) {
                             foreach ($primary_variation as $variation1) {
                                 if (has_term(absint($variation1->term_id), $primary_attr_id, $post->ID)) {
@@ -99,7 +100,8 @@ if (!class_exists('WBM_Frontend_Product')) {
                                 <?php }
                             }
                         } ?>
-                        <div class="cntn lftbtn"><button data-type="next" class="wbm_next wbm_navigate_button_for_first"><?= __('Continue', 'wbm') ?></button></div>
+						</div>
+                        <div class="blato"><div class="cntn lftbtn"><button data-type="next" class="wbm_next wbm_navigate_button_for_first"><?= __('Continue', 'wbm') ?> <i class="fa fa-angle-double-right"></i></button></div></div>
                     </div>
                     <?php if (isset($secondary_variations) && !empty($secondary_variations)) {
                         foreach ($secondary_variations as $variation) {

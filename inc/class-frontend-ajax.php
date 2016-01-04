@@ -83,7 +83,7 @@ if (!class_exists('WBM_Frontend_Ajax')) {
             <?php }?>
             </div>
 <!--            <div class="cntn lftbtn"><a class="wbm_previous wbm_navigate_button" data-type="prev" href="#"><< --><?//=__('Previous','wbm')?><!--</a> <a data-type="next" class="wbm_next wbm_navigate_button" href="#">--><?//=__('Next','wbm')?><!-- >></a></div>-->
-            <div class="cntn lftbtn"><button data-type="next" class="wbm_next wbm_navigate_button"><?=__('Continue','wbm')?></button></div>
+            <div class="cntn lftbtn"><button data-type="next" class="wbm_next wbm_navigate_button"><?=__('Continue','wbm')?> <i class="fa fa-angle-double-right"></i></button></div>
            <?php  exit;
         }
 

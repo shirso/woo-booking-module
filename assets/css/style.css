@@ -45,3 +45,5 @@ a.toltp span b {    background: #285e8e;    position: absolute;    bottom: -8px;
 #wbm_choice_details>ul>li:before{content: "\f009";}
 #wbm_choice_details>ul>li>ul>li:before{content: "\f00b";}
 #wbm_choice_details>ul>li>ul>li>ul>li:before{content: "\f00c";}
+.tooltipster-content a{color:#fff; font-style:italic;}
+.blato {display:block; text-align:center;}
