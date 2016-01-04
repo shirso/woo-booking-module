@@ -26,6 +26,7 @@ if (!class_exists('WBM_Booking_Module')) {
             require_once(WBM_PLUGIN_DIR . '/inc/class-frontend-product.php');
             require_once(WBM_PLUGIN_DIR . '/inc/class-frontend-ajax.php');
             require_once(WBM_PLUGIN_DIR . '/inc/class-product-cart.php');
+            load_plugin_textdomain('wbm', FALSE, dirname(plugin_basename(__FILE__)).'/languages/');
         }
     }
 
