@@ -5,6 +5,7 @@ jQuery(function($){
    var currentIndex=0;
    var hidden_container=$("#wbm_hidden_container");
    $('.wbm_switch').lc_switch(wbm_params.yes_string,wbm_params.no_string);
+    $('.toltp').tooltipster();
    var inactiveTabs=[];
    var noNeedTabs=[];
    for(var i=1;i<$("#wbm_secondary_list").find("li").length-1;i++){

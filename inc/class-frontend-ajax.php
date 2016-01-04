@@ -28,7 +28,7 @@ if (!class_exists('WBM_Frontend_Ajax')) {
                 <div class="mlftx"> <h2><?=$termDetails->name?></h2>
                 <p><?=$termDetails->description?>
                     <?php if(!empty($tooltip)){?>
-                        <a href="#" class="toltp">(?) <span><?=esc_html($tooltip)?></span></a>
+                        <a href="#" class="toltp" title="<?=esc_html($tooltip)?>">(?)</a>
                     <?php }?>
                 </p>
 

@@ -92,7 +92,7 @@ if (!class_exists('WBM_Frontend_Product')) {
                                         <p>
                                             <?= $variation1->description ?>
                                             <?php if(!empty($tooltip)){?>
-                                            <a href="#" class="toltp">(?) <span><?=esc_html($tooltip)?></span></a>
+                                            <a href="#" class="toltp" title="<?=esc_html($tooltip)?>">(?)</a>
                                         <?php }?>
                                         </p>
                                     </div>
