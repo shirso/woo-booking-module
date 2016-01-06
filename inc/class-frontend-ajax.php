@@ -70,9 +70,9 @@ if (!class_exists('WBM_Frontend_Ajax')) {
                <?php $count_date=0; foreach($allOptions_dates as $date){?>
                        <div id="date_div_<?=$taxonomy?>_<?=$termId?>_<?=$count_date?>" data-taxonomy="<?=$taxonomy?>" data-term="<?=$termId?>" data-count="<?=$count_date?>" data-title="<?=@$date['title']?>" class="wbm_date_div">
                            <div class="chakkbx chk2">
-                               <label><?=@$date['title']?></label>
+                               <input type="checkbox"  class="checkbox2" id="wbm_check_<?=$taxonomy?>_<?=$termId?>_<?=$count_date?>"> <label for="wbm_check_<?=$taxonomy?>_<?=$termId?>_<?=$count_date?>"><?=@$date['title']?></label>
                             </div>
-                           <div class="dtm-secsec clearfix">
+                           <div class="dtm-secsec clearfix wbm_hidden">
                                <div><label><?=__('Date','wbm')?></label><input readonly type="text" data-taxonomy="<?=$taxonomy?>" data-term="<?=$termId?>" data-count="<?=$count_date?>" class="wbm_datetime_input" data-type="date" id="wbm_checking_date_<?=$taxonomy?>_<?=$termId?>_<?=$count_date?>"/></div>
                                <div><label><?=__('Time','wbm')?></label><input  readonly type="text" data-taxonomy="<?=$taxonomy?>" data-term="<?=$termId?>" data-count="<?=$count_date?>" class="wbm_datetime_input" data-type="time" id="wbm_checking_time_<?=$taxonomy?>_<?=$termId?>_<?=$count_date?>"/></div>
                            </div>
