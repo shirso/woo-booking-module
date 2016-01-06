@@ -52,6 +52,7 @@ if (!class_exists('WBM_Frontend_Ajax')) {
                              <?php if(isset($select['options']) && !empty($select['options'])){?>
                                 <select class="wbm_options" data-count="<?=$count_select?>" data-taxonomy="<?=$taxonomy?>" data-term="<?=$termId?>" data-title="<?=@$select['title']?>">
                                  <option value="">---</option>
+                                 <option value="-" data-price=""><?=__('Not Needed','wbm')?></option>
                                  <?php foreach($select['options'] as $option){?>
                                   <option data-price="<?=@$option['price']?>" value="<?=@$option['value']?>"><?=@$option['value']?> <?php if(!empty($option['price'])){?> (<?=get_woocommerce_currency_symbol()?><?=@$option['price']?>)<?php }?></option>
                                   <?php } ?>
