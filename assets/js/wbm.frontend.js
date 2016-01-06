@@ -116,17 +116,23 @@ jQuery(function($){
       }
 
   });
- //$(document).on('change','.wbm_date_check',function(){
- //    var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
- //    var taxonomy=$(this).data('taxonomy');
- //    var term=$(this).data('term');
- //    var div='#date_div_'+taxonomy+'_'+term;
- //    if(status=='checked'){
- //        $(div).removeClass('wbm_hidden');
- //    }else{
- //        $(div).addClass('wbm_hidden');
- //    }
- //});
+ $(document).on('change','.wbm_date_check',function(){
+     var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
+     var taxonomy=$(this).data('taxonomy');
+     var term=$(this).data('term');
+     var date_count=$(this).data('count');
+     var div='#date_div_'+taxonomy+'_'+term+'_'+date_count;
+     if(status=='checked'){
+         $(div).removeClass('wbm_hidden');
+         $(div).find('input').addClass('wbm_required');
+     }else{
+         $(div).addClass('wbm_hidden');
+         $(div).find('input').val('');
+         $("#wbm_dates_"+taxonomy+"_"+term+"_"+date_count).find(".wbm_date").val("");
+         $("#wbm_dates_"+taxonomy+"_"+term+"_"+date_count).find(".wbm_time").val("");
+         $(div).find('input').removeClass('wbm_required');
+     }
+ });
  $(document).on('click','.wbm_navigate_button',function(e){
      e.preventDefault();
      var type=$(this).data('type');
@@ -255,6 +261,7 @@ var loadHiddenDates=function(resp,taxonomy,termId){
 };
 var makeDatetimePicker=function(resp,taxonomy,termId){
     $('.toltp').tooltipster();
+    $('.wbm_date_check').checkator();
 $(resp).find(".wbm_datetime_input").each(function(k,v){
     var self=$(this);
     var type=self.data("type");
@@ -378,7 +385,7 @@ var removeFromInactive=function(number){
 };
 var checkValidity=function(elementId){
     var validate=true;
-    $('#'+elementId +' input, #'+elementId+' select').each(function(k,v){
+    $('#'+elementId +' .wbm_required, #'+elementId+' select').each(function(k,v){
         if($(v).val()==""){
             validate=false;
             return false;
